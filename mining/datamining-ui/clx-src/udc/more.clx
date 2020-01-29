@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-75a0c8b1" version="1.0.0.0">
+  <head std:sid="head-909d259b">
+    <title>more</title>
+    <screen std:sid="screen-b4b97993" id="default" customHeight="600" customWidth="800" height="768px" minwidth="1024px" name="default" width="1024px"/>
+    <screen std:sid="screen-8a740757" id="tablet" height="667px" maxwidth="1023px" minwidth="500px" name="tablet" width="500px"/>
+    <screen std:sid="screen-0e87c02f" id="mobile" height="525px" maxwidth="499px" name="mobile" width="350px"/>
+    <cl:model std:sid="model-eceb6611">
+      <cl:dataset std:sid="d-set-0a9ad9d7" id="dsCount" sortcondition="value desc&#xD;&#xA;">
+        <cl:datacolumnlist>
+          <cl:datacolumn datatype="expression" expression="Number(val2)" name="value"/>
+          <cl:datacolumn name="name"/>
+          <cl:datacolumn datatype="string" displayonly="false" expression="Number(value)" name="val2"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-521ed57e" style="top:0px; color:#ffffff; left:0px; width:390px; height:290px;">
+    <cl:listener std:sid="listener-54909c07" handler="onBodyInit" name="init"/>
+    <cl:listener std:sid="listener-8dfcdd58" handler="onBodyLoad" name="load"/>
+    <cl:grid std:sid="grid-b619a623" id="grd1" style="background-color:white; color:black; font-family:@HY견고딕; background-image:none;" datasetid="dsCount">
+      <cl:xylayoutdata std:sid="xyl-data-7b717ebe" bottom="10px" horizontalAnchor="BOTH" left="10px" right="10px" top="10px" verticalAnchor="BOTH"/>
+      <cl:gridcolumn std:sid="g-column-544a1f5e" width="62px"/>
+      <cl:gridcolumn std:sid="g-column-d586717a" width="163px"/>
+      <cl:gridheader std:sid="gh-band-3a647e24">
+        <cl:gridrow std:sid="g-row-51454fee"/>
+        <cl:gridcell std:sid="gh-cell-ccbd8fbb" colindex="0" rowindex="0" style="background-color:#626262; color:white;" filterable="false" sortable="false" targetcolumnname="value" text="빈도수"/>
+        <cl:gridcell std:sid="gh-cell-e3453a9e" colindex="1" rowindex="0" style="background-color:#626262; color:white;" filterable="false" sortable="false" targetcolumnname="name" text="단어"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-691b445e">
+        <cl:gridrow std:sid="g-row-21cdc650"/>
+        <cl:gridcell std:sid="gd-cell-0d172141" colindex="0" rowindex="0" columnname="value"/>
+        <cl:gridcell std:sid="gd-cell-5317ade8" colindex="1" rowindex="0" columnname="name"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:xylayout std:sid="xylayout-b0994a14"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

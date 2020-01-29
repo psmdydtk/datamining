@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-50866412" version="1.0.0.0">
+  <head std:sid="head-9d7fea65">
+    <title>ChartShell</title>
+    <screen std:sid="screen-d30d8e9f" id="default" height="768px" minwidth="1024px" name="default" width="1024px"/>
+    <screen std:sid="screen-f690475a" id="tablet" height="667px" maxwidth="1023px" minwidth="500px" name="tablet" width="500px"/>
+    <screen std:sid="screen-ad2791e8" id="mobile" height="525px" maxwidth="499px" name="mobile" width="350px"/>
+    <cl:model std:sid="model-304854b8"/>
+    <cl:appspec title="옵션동적구성차트udc">
+      <cl:property name="option" type="object"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-ff82eb8a" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:listener std:sid="listener-2070984b" handler="onBodyLoad" name="load"/>
+    <cl:listener std:sid="listener-586c43fe" handler="onBodyInit" name="init"/>
+    <cl:listener std:sid="listener-1cc51733" handler="onBodyPropertyChange" name="property-change"/>
+    <cl:uicontrolshell std:sid="uic-shell-0dddc5fa" id="shl1" style="color:while;">
+      <cl:listener std:sid="listener-5a0de472" handler="onShl1Init" name="init"/>
+      <cl:listener std:sid="listener-a230ce9f" handler="onShl1Load" name="load"/>
+      <cl:listener std:sid="listener-2029d9cd" handler="onShl1Dispose" name="dispose"/>
+      <cl:xylayoutdata std:sid="xyl-data-2262014a" bottom="0px" horizontalAnchor="BOTH" left="0px" right="0px" top="0px" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-be5c37c5"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

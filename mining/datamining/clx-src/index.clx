@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ff67b57" version="1.0.0.0">
+  <head std:sid="head-38e68629">
+    <title>index</title>
+    <screen std:sid="screen-e3db7c70" id="new-screen" active="true" customHeight="600" customWidth="800" height="1080px" minwidth="1920px" name="new-screen" width="1920px"/>
+    <screen std:sid="screen-67f8ec5a" id="default" active="false" customHeight="600" customWidth="800" height="768px" maxwidth="1919px" minwidth="1024px" name="default" width="1024px"/>
+    <screen std:sid="screen-1d1e9a1e" id="tablet" height="667px" maxwidth="1023px" minwidth="500px" name="tablet" width="500px"/>
+    <screen std:sid="screen-e2363a6f" id="mobile" height="525px" maxwidth="499px" name="mobile" width="350px"/>
+    <cl:model std:sid="model-355e5b74">
+      <cl:submission std:sid="submission-7804e301" id="sms1"/>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-c271e989" style="top:0px; left:0px; width:800px; height:600px;">
+    <cl:listener std:sid="listener-59296a99" handler="onBodyInit" name="init"/>
+    <cl:output std:sid="output-53a37ab6" style="text-align:center;" value="이 영화 어때?">
+      <cl:formdata std:sid="f-data-6186ced2" col="2" colspan="2" row="0" rowspan="1"/>
+    </cl:output>
+    <cl:combobox std:sid="c-box-627b589f" id="cmb1">
+      <cl:formdata std:sid="f-data-2bad8f3a" col="2" colspan="2" row="2" rowspan="1"/>
+    </cl:combobox>
+    <cl:button std:sid="button-1b871c83" value="검색">
+      <cl:formdata std:sid="f-data-41c9977f" halign="LEFT" col="4" row="2"/>
+    </cl:button>
+    <cl:output std:sid="output-44318d1c" id="ipt_result" style="text-align:center;" value="검색결과">
+      <cl:formdata std:sid="f-data-80653aa2" col="2" colspan="2" row="5" rowspan="1"/>
+    </cl:output>
+    <cl:output std:sid="output-d3e195c0" id="ipt_rank" style="text-align:center;" value="영화랭킹">
+      <cl:formdata col="0" colspan="2" row="3" rowspan="1"/>
+    </cl:output>
+    <cl:output std:sid="output-09f14c1c" value="영화인 인기검색어">
+      <cl:formdata col="4" colspan="2" row="6" rowspan="1"/>
+    </cl:output>
+    <cl:output std:sid="output-e4e0f06f" value="티켓예매순">
+      <cl:formdata col="4" colspan="2" row="10" rowspan="1"/>
+    </cl:output>
+    <cl:grid std:sid="grid-1bd8c749" id="grd_rank">
+      <cl:formdata col="0" colspan="2" row="4" rowspan="11"/>
+      <cl:gridcolumn std:sid="g-column-0eefa619"/>
+      <cl:gridcolumn std:sid="g-column-157273b4"/>
+      <cl:gridcolumn std:sid="g-column-87f738d1"/>
+      <cl:gridcolumn std:sid="g-column-0fd84553"/>
+      <cl:gridcolumn std:sid="g-column-ee9eb9b9"/>
+      <cl:gridheader std:sid="gh-band-aff63062">
+        <cl:gridrow std:sid="g-row-e388cfcc"/>
+        <cl:gridcell std:sid="gh-cell-ce27786a" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-61903ace" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-0d93d4ef" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-ce47406d" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-a575eb3c" colindex="4" rowindex="0"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-2c7aa00c">
+        <cl:gridrow std:sid="g-row-7a11278b"/>
+        <cl:gridcell std:sid="gd-cell-5bc9af2f" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-e52f554d" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-56e216a3" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-7ca30fa9" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-438008d1" colindex="4" rowindex="0"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:grid std:sid="grid-ee189e64" id="grd_pop">
+      <cl:formdata col="4" colspan="2" row="7" rowspan="3"/>
+      <cl:gridcolumn std:sid="g-column-982de0d1"/>
+      <cl:gridcolumn std:sid="g-column-52bd56a2"/>
+      <cl:gridcolumn std:sid="g-column-af1ad77e"/>
+      <cl:gridcolumn std:sid="g-column-6268fd2a"/>
+      <cl:gridcolumn std:sid="g-column-53befeb4"/>
+      <cl:gridheader std:sid="gh-band-ec5c92fe">
+        <cl:gridrow std:sid="g-row-77104f05"/>
+        <cl:gridcell std:sid="gh-cell-473799f7" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-6df42e80" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-903fc218" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-a2d23441" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-82e2c45d" colindex="4" rowindex="0"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-a4762975">
+        <cl:gridrow std:sid="g-row-62a152f8"/>
+        <cl:gridcell std:sid="gd-cell-3fb87e0e" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-6849eb9e" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-6cf144b8" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-e42c0cc7" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-9fa508cf" colindex="4" rowindex="0"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:grid std:sid="grid-7f69bd16" id="grd_ticket">
+      <cl:formdata col="4" colspan="2" row="11" rowspan="4"/>
+      <cl:gridcolumn std:sid="g-column-704e0c4a"/>
+      <cl:gridcolumn std:sid="g-column-dfce1fa2"/>
+      <cl:gridcolumn std:sid="g-column-74cd4759"/>
+      <cl:gridcolumn std:sid="g-column-18aa9fed"/>
+      <cl:gridcolumn std:sid="g-column-5b7f95ac"/>
+      <cl:gridheader std:sid="gh-band-c60be4d5">
+        <cl:gridrow std:sid="g-row-c24bab98"/>
+        <cl:gridcell std:sid="gh-cell-6798f596" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-677ebe7f" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-0caf4d97" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-41a50148" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gh-cell-1ab73b65" colindex="4" rowindex="0"/>
+      </cl:gridheader>
+      <cl:griddetail std:sid="gd-band-b40d3404">
+        <cl:gridrow std:sid="g-row-2220a4f2"/>
+        <cl:gridcell std:sid="gd-cell-7d975004" colindex="0" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-c8460725" colindex="1" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-d7cda1aa" colindex="2" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-a2eec9f8" colindex="3" rowindex="0"/>
+        <cl:gridcell std:sid="gd-cell-cc2ec3b2" colindex="4" rowindex="0"/>
+      </cl:griddetail>
+    </cl:grid>
+    <cl:formlayout std:sid="f-layout-60d3f45f">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

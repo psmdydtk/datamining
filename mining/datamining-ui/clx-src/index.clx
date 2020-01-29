@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ff67b57" version="1.0.0.0">
+  <head std:sid="head-38e68629">
+    <title>index</title>
+    <style std:sid="style-aca69ec1" id="gnb_style" type="text/css"/>
+    <screen std:sid="screen-e3db7c70" id="new-screen" active="true" customHeight="600" customWidth="800" height="1080px" minwidth="1920px" name="new-screen" width="1920px"/>
+    <screen std:sid="screen-67f8ec5a" id="default" active="false" customHeight="600" customWidth="800" height="768px" maxwidth="1919px" minwidth="1024px" name="default" width="1024px"/>
+    <screen std:sid="screen-1d1e9a1e" id="tablet" height="667px" maxwidth="1023px" minwidth="500px" name="tablet" width="500px"/>
+    <screen std:sid="screen-e2363a6f" id="mobile" height="525px" maxwidth="499px" name="mobile" width="350px"/>
+    <cl:model std:sid="model-355e5b74">
+      <cl:submission std:sid="submission-7804e301" id="getRank" action="../dtctl/getRank.do">
+        <cl:requestdata dataid="dsRank"/>
+        <cl:requestdata dataid="dsActor"/>
+        <cl:requestdata dataid="dsTicket"/>
+        <cl:responsedata dataid="dsRank" isadd="true"/>
+        <cl:responsedata dataid="dsActor"/>
+        <cl:responsedata dataid="dsTicket"/>
+      </cl:submission>
+      <cl:dataset std:sid="d-set-ee701c93" id="dsRank">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="movie"/>
+          <cl:datacolumn name="href"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:submission std:sid="submission-5a6c385c" id="getComment" action="../dtctl/getComment.do" async="true">
+        <cl:listener std:sid="listener-4cb39cf4" handler="onGetCommentBeforeSubmit" name="before-submit"/>
+        <cl:listener std:sid="listener-cf5b7835" handler="onGetCommentSubmitSuccess" name="submit-success"/>
+        <cl:listener std:sid="listener-f27059e1" handler="onGetCommentSubmitLoadProgress" name="submit-load-progress"/>
+        <cl:requestdata dataid="dmComment"/>
+        <cl:requestdata dataid="dsCount"/>
+        <cl:requestdata dataid="dsJudge"/>
+        <cl:responsedata dataid="dsCount"/>
+        <cl:responsedata dataid="dsJudge"/>
+      </cl:submission>
+      <cl:datamap std:sid="d-map-579a6b5e" id="dmComment">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="code"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:dataset std:sid="d-set-fe681cc9" id="dsJudge">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="good"/>
+          <cl:datacolumn name="bad"/>
+          <cl:datacolumn name="center"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-0a9ad9d7" id="dsCount" sortcondition="value desc&#xD;&#xA;">
+        <cl:datacolumnlist>
+          <cl:datacolumn datatype="expression" expression="Number(val2)" name="value"/>
+          <cl:datacolumn name="name"/>
+          <cl:datacolumn datatype="string" displayonly="false" expression="Number(value)" name="val2"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-ffa1098a" id="dsTicket">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="rank"/>
+          <cl:datacolumn name="actor"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-d4010dd6" id="dsActor">
+        <cl:datacolumnlist>
+          <cl:datacolumn name="rank"/>
+          <cl:datacolumn name="actor"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-c271e989" style="background-color:white; top:0px; color:#231919; left:0px; width:800px; background-image:none; height:600px;">
+    <cl:listener std:sid="listener-59296a99" handler="onBodyInit" name="init"/>
+    <cl:group std:sid="group-f7cb690a" style="background-color:white; background-image:none;">
+      <cl:formdata std:sid="f-data-2ecf6977" col="0" colspan="1" row="1" rowspan="1"/>
+      <cl:grid std:sid="grid-fc81de12" id="grd1" style="background-color:white; color:black; font-family:@HY견고딕; background-image:none;" autofit="all" autorowheight="all" datasetid="dsRank" readonly="true" vscroll="hidden">
+        <cl:xylayoutdata std:sid="xyl-data-72baff2b" bottom="49px" horizontalAnchor="BOTH" left="10px" right="10px" top="20px" verticalAnchor="BOTH"/>
+        <cl:gridcolumn std:sid="g-column-c18826c4" width="51px"/>
+        <cl:gridcolumn std:sid="g-column-e1370de2" width="204px"/>
+        <cl:gridheader std:sid="gh-band-e3424cc8">
+          <cl:gridrow std:sid="g-row-62e9ba8f"/>
+          <cl:gridcell std:sid="gh-cell-cfe9b3ef" class="header" colindex="0" rowindex="0" style="background-color:#626262; color:white; background-image:none;" targetcolumnname="movie" text="순위"/>
+          <cl:gridcell std:sid="gh-cell-746f97a5" class="header" colindex="1" rowindex="0" style="background-color:#626262; color:white; background-image:none;" targetcolumnname="href" text="영화제목"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-1562de8a">
+          <cl:gridrow std:sid="g-row-18a2e167"/>
+          <cl:gridcell std:sid="gd-cell-a3fc277e" colindex="0" rowindex="0" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-a4036422" colindex="1" rowindex="0" columnname="movie"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:xylayout std:sid="xylayout-1ad9ca8d"/>
+    </cl:group>
+    <cl:group std:sid="group-026cfc3d" style="background-color:white; background-image:none;">
+      <cl:formdata std:sid="f-data-207e2abf" col="1" colspan="1" row="1" rowspan="1"/>
+      <cl:combobox std:sid="c-box-627b589f" id="cmb1" style="border-right-style:solid-2pt-; border-bottom-color:#36d136; border-left-style:solid-2pt-; border-left-color:#36d136; border-top-color:#36d136; border-right-color:#36d136; border-bottom-style:solid-2pt-; border-top-style:solid-2pt-;" placeholder="우측 화살표를 눌러 원하는 영화를 선택해 주세요.">
+        <cl:xylayoutdata std:sid="xyl-data-b066b32f" height="40px" horizontalAnchor="BOTH" left="10px" right="111px" top="20px" verticalAnchor="TOP"/>
+        <cl:itemset datasetid="dsRank" label="movie" value="href"/>
+      </cl:combobox>
+      <cl:button std:sid="button-1b871c83" style="background-color:#36d136; border-radius:0px; color:#efefef; border-bottom-color:#36d136; border-left-color:#36d136; border-top-color:#36d136; font-family:@DFKai-SB; border-right-color:#36d136; background-image:none;" value="검색">
+        <cl:listener std:sid="listener-954eb380" handler="onButtonClick" name="click"/>
+        <cl:xylayoutdata std:sid="xyl-data-e44ce9f4" height="40px" horizontalAnchor="RIGHT" right="10px" top="20px" verticalAnchor="TOP" width="91px"/>
+      </cl:button>
+      <cl:udc std:sid="ud-control-cb4fc100" id="shl1" style="background-color:#ebebeb; color:white; background-image:none;" type="udc.ChartShell">
+        <cl:xylayoutdata std:sid="xyl-data-b55a63bc" height="195px" horizontalAnchor="BOTH" left="10px" right="10px" top="70px" verticalAnchor="TOP"/>
+      </cl:udc>
+      <cl:udc std:sid="ud-control-36b8f9af" id="shl2" style="background-color:#ebebeb; color:white; font-family:color; background-image:none;" type="udc.ChartShell">
+        <cl:xylayoutdata std:sid="xyl-data-96a71259" bottom="49px" horizontalAnchor="BOTH" left="10px" right="10px" top="264px" verticalAnchor="BOTH"/>
+      </cl:udc>
+      <cl:button std:sid="button-269992b7" id="btn_more" style="border-radius:5px;" value="자세히.." visible="false">
+        <cl:listener std:sid="listener-133761fd" handler="onButtonClick3" name="click"/>
+        <cl:xylayoutdata std:sid="xyl-data-27f62e3f" bottom="67px" height="20px" horizontalAnchor="RIGHT" right="20px" verticalAnchor="BOTTOM" width="100px"/>
+      </cl:button>
+      <cl:output std:sid="output-e31ea8ea" id="opt_bum" style="background-image:url('/image/ex2.jpg');" value="" visible="false">
+        <cl:xylayoutdata std:sid="xyl-data-87c23c0e" height="20px" horizontalAnchor="LEFT" left="20px" top="90px" verticalAnchor="TOP" width="100px"/>
+      </cl:output>
+      <cl:button std:sid="button-5051c032" id="btn_exp" style="border-radius:5px;" value="예시" visible="false">
+        <cl:listener std:sid="listener-e14ccb99" handler="onBtn_expClick" name="click"/>
+        <cl:xylayoutdata std:sid="xyl-data-e015fade" height="20px" horizontalAnchor="RIGHT" right="23px" top="90px" verticalAnchor="TOP" width="100px"/>
+      </cl:button>
+      <cl:xylayout std:sid="xylayout-bca3b5c1"/>
+    </cl:group>
+    <cl:group std:sid="group-9789c0ca" style="background-color:white; background-image:none;">
+      <cl:formdata col="2" row="1"/>
+      <cl:grid std:sid="grid-f5e19dc8" id="grd2" style="background-color:white; color:black; font-family:@HY견고딕; background-image:none;" datasetid="dsActor" readonly="true" vscroll="hidden">
+        <cl:xylayoutdata std:sid="xyl-data-a8863b38" bottom="245px" height="145px" horizontalAnchor="LEFT" left="10px" verticalAnchor="BOTTOM" width="280px"/>
+        <cl:gridcolumn std:sid="g-column-f93847a5" width="67px"/>
+        <cl:gridcolumn std:sid="g-column-0077d228" width="124px"/>
+        <cl:gridheader std:sid="gh-band-95ec3be7">
+          <cl:gridrow std:sid="g-row-7d70daa3"/>
+          <cl:gridcell std:sid="gh-cell-980be994" class="header" colindex="0" rowindex="0" style="background-color:#626262; color:white; background-image:none;" filterable="false" sortable="false" targetcolumnname="rank" text="순위"/>
+          <cl:gridcell std:sid="gh-cell-07298ccb" class="header" colindex="1" rowindex="0" style="background-color:#626262; color:white; background-image:none;" filterable="false" sortable="false" targetcolumnname="actor" text="배우이름"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-d3022c31">
+          <cl:gridrow std:sid="g-row-147e7e52"/>
+          <cl:gridcell std:sid="gd-cell-ad140b78" colindex="0" rowindex="0" columnname="rank"/>
+          <cl:gridcell std:sid="gd-cell-9f1cb226" colindex="1" rowindex="0" columnname="actor"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:grid std:sid="grid-f18a5e94" id="grd3" style="background-color:white; color:black; font-family:@HY견고딕; background-image:none;" datasetid="dsTicket" readonly="true" vscroll="hidden">
+        <cl:xylayoutdata std:sid="xyl-data-1762a277" bottom="50px" height="145px" horizontalAnchor="LEFT" left="10px" verticalAnchor="BOTTOM" width="280px"/>
+        <cl:gridcolumn std:sid="g-column-fc7be0f6" width="65px"/>
+        <cl:gridcolumn std:sid="g-column-85676246" width="113px"/>
+        <cl:gridheader std:sid="gh-band-e4ac47c5">
+          <cl:gridrow std:sid="g-row-992265c2"/>
+          <cl:gridcell std:sid="gh-cell-807e1f98" class="header" colindex="0" rowindex="0" style="background-color:#626262; color:white; background-image:none;" filterable="false" sortable="false" targetcolumnname="rank" text="순위"/>
+          <cl:gridcell std:sid="gh-cell-0233be1e" class="header" colindex="1" rowindex="0" style="background-color:#626262; color:white; background-image:none;" filterable="false" sortable="false" targetcolumnname="actor" text="영화제목"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-8a4198e5">
+          <cl:gridrow std:sid="g-row-0754016c"/>
+          <cl:gridcell std:sid="gd-cell-5cb10d74" colindex="0" rowindex="0" columnname="rank"/>
+          <cl:gridcell std:sid="gd-cell-c53f4003" colindex="1" rowindex="0" columnname="actor"/>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:output std:sid="output-4931172d" style="background-color:white; color:black; font-weight:bolder; font-family:@HY견고딕; background-image:none; text-align:center;" value="영화 예메 순위">
+        <cl:xylayoutdata std:sid="xyl-data-2b6c2dcc" bottom="204px" height="30px" horizontalAnchor="LEFT" left="5px" verticalAnchor="BOTTOM" width="280px"/>
+      </cl:output>
+      <cl:output std:sid="output-cd29be01" id="op_date" style="text-align:right;" value="op">
+        <cl:xylayoutdata std:sid="xyl-data-fb65bd3d" bottom="10px" height="20px" horizontalAnchor="LEFT" left="15px" verticalAnchor="BOTTOM" width="270px"/>
+      </cl:output>
+      <cl:output std:sid="output-09f14c1c" style="background-color:white; color:black; font-weight:bolder; font-family:@HY견고딕; background-image:none; text-align:center;" value="영화인 인기검색어">
+        <cl:xylayoutdata std:sid="xyl-data-2f944935" bottom="399px" height="34px" horizontalAnchor="RIGHT" right="10px" verticalAnchor="BOTTOM" width="280px"/>
+      </cl:output>
+      <cl:xylayout std:sid="xylayout-eb5262bf"/>
+    </cl:group>
+    <cl:group std:sid="group-13d96834">
+      <cl:formdata std:sid="f-data-f9cef239" col="1" row="0"/>
+      <cl:output std:sid="output-53a37ab6" style="border-right-style:solid; color:black; border-bottom-color:#36d136; font-weight:900; border-left-color:#36d136; font-size:25px; border-right-color:#36d136; font-style:normal; border-top-style:solid; background-color:white; border-left-style:solid; border-top-color:#36d136; font-family:@HY헤드라인M; border-bottom-style:solid; background-image:none; text-align:center;" value="이 영화 어때? ">
+        <cl:xylayoutdata std:sid="xyl-data-a98ce6d8" height="46px" horizontalAnchor="LEFT" left="10px" top="3px" verticalAnchor="TOP" width="241px"/>
+      </cl:output>
+      <cl:output std:sid="output-862cad6d" style="background-image:url('/image/magnifying-glass.png');">
+        <cl:xylayoutdata std:sid="xyl-data-610f22d2" height="35px" horizontalAnchor="LEFT" left="14px" top="10px" verticalAnchor="TOP" width="35px"/>
+      </cl:output>
+      <cl:xylayout std:sid="xylayout-ccd744ea"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-812d93ca" hmargin="20px" hspace="1px" vmargin="10px" vseparatorcolor="white" vseparatorwidth="1" vspace="0px">
+      <cl:rows autoSizing="false" length="50" minlength="0" shadecolor="#000000" shadetype="NONE" unit="PIXEL"/>
+      <cl:rows length="1" shadecolor="transparent" shadetype="NONE" unit="FRACTION"/>
+      <cl:columns autoSizing="false" length="356" minlength="0" shadecolor="#000000" shadetype="NONE" unit="PIXEL"/>
+      <cl:columns autoSizing="true" length="1" minlength="0" shadecolor="#000000" shadetype="NONE" unit="FRACTION"/>
+      <cl:columns autoSizing="false" length="300" minlength="0" shadecolor="#000000" shadetype="NONE" unit="PIXEL"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

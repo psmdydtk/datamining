@@ -1,0 +1,23 @@
+{
+  "html-lang": "ko",
+  "runtime-lib": [
+    "/resource/cleopatra.js",
+    "/resource/conf/defaults.js"
+  ],
+  "cache-control": false,
+  "deploy-config-base": [],
+  "type-handler": {"dateformat": "yyyyMMddHHmmss"},
+  "deploy-path": [
+    "/ui",
+    "/"
+  ],
+  "fileupload": {
+    "tempdirpath": "",
+    "thresholdsize": 10240,
+    "fileconvertor": null,
+    "maxbodysize": -1,
+    "fileuploadhandler": null,
+    "maxfilesize": -1
+  },
+  "runtime-css": ["/resource/css/cleopatra.css"]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="datamining">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
+        <wb-resource deploy-path="/ui" source-path="/.exbuilder-fragments/datamining-ui" tag="exbuilderProjectReference"/>
+        <wb-resource deploy-path="/" source-path="/.exbuilder-fragments/datamining" tag="exbuilderProjectReference"/>
+        <wb-resource deploy-path="/resource" source-path="/exbuilder/runtime" tag="exbuilderClientSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/exbuilder/config" tag="exbuilderConfig"/>
+        <property name="context-root" value="datamining"/>
+        <property name="java-output-path" value="/datamining/build/classes"/>
+    </wb-module>
+</project-modules>

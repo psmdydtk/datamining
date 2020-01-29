@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-6626ccaa" version="1.0.0.0">
+  <head std:sid="head-4e546879">
+    <title>judgeExample</title>
+    <screen std:sid="screen-2f2df069" id="default" customHeight="600" customWidth="800" height="768px" minwidth="1024px" name="default" width="1024px"/>
+    <screen std:sid="screen-3670b3a8" id="tablet" height="667px" maxwidth="1023px" minwidth="500px" name="tablet" width="500px"/>
+    <screen std:sid="screen-69018e11" id="mobile" height="525px" maxwidth="499px" name="mobile" width="350px"/>
+    <cl:model std:sid="model-488325db"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-5b6c89b0" style="top:0px; left:0px; width:370px; height:230px;">
+    <cl:group std:sid="group-b1801d51">
+      <cl:xylayoutdata std:sid="xyl-data-0dcd1145" height="222px" horizontalAnchor="LEFT" left="-1px" top="6px" verticalAnchor="TOP" width="391px"/>
+      <cl:output std:sid="output-4858263a" style="background-image:url('/image/ex1.jpg');">
+        <cl:xylayoutdata std:sid="xyl-data-a3fd528f" height="166px" horizontalAnchor="LEFT" left="5px" top="20px" verticalAnchor="TOP" width="366px"/>
+      </cl:output>
+      <cl:xylayout std:sid="xylayout-8662d9c9"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-9741ad45"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
